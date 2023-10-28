@@ -30,6 +30,7 @@ const CharacterModal: React.FC<CharacterModalProps> = ({
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
+    // eslint-disable-next-line
   }, [onClose]);
 
   return (
