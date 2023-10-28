@@ -55,6 +55,7 @@ const CharacterTable: React.FC = () => {
     dispatch(setNameFilter(searchTerm));
     dispatch(setCurrentPage(1));
     setCurrentPage(1);
+    setPageInput("1");
     if (nameFilter) {
       dispatch(fetchCharactersByName({ name: nameFilter, page: 1 }));
     } else {
@@ -92,7 +93,7 @@ const CharacterTable: React.FC = () => {
       </div>
       {loading === "pending" ? (
         <div>Loading Characters...</div>
-      ) : (
+      ) : loading === "succeeded" ? (
         <div>
           <table>
             <thead>
@@ -136,8 +137,9 @@ const CharacterTable: React.FC = () => {
             </button>
           </div>
         </div>
+      ) : (
+        <div>Error: {error}</div>
       )}
-      {error && <div>Error: {error}</div>}
       {selectedCharacter && (
         <CharacterModal
           character={selectedCharacter}

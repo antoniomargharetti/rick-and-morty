@@ -1,8 +1,5 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## To run this app
 
 In the project directory, you can run:
 
@@ -14,33 +11,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+This project was also deployed using netlify.
+**/ Live link (https://main--velvety-pegasus-30a60c.netlify.app/) /**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Approach
 
-### `npm run build`
+* API Calls with Axios: Utilized Axios for API calls to easily interact with external data sources, ensuring the efficient retrieval of the required data. Axios's reliability and ease of use in handling HTTP requests makes it a good choice.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* State Management with Redux: Harnessed Redux, a predictable state container, to ensure data consistency and accessibility throughout the application. This centralized approach simplifies the management of complex state and is particularly valuable when data needs to be shared across different components. The use of Redux ensured that data fetched from API calls could be accessed globally, facilitating easy data sharing between components and eliminating the need to pass data through multiple layers.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Thunks for Asynchronous Actions: To handle asynchronous operations, employed Redux Thunk middleware, which enabled dispatch actions for asynchronous data fetching while maintaining control over the application's flow. This ensured a smooth and predictable user experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Local State management with useState: Used the useState hook from React for managing variables with limited scope, specific to particular components. This approach enhances code readability and keeps the component's logic self-contained. 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Using TypeScript: Choosing TypeScript over JavaScript enhanced code quality and type safety. TypeScript's type checking and static analysis capabilities helps catch potential issues during development, leading to more robust and maintainable code. TypeScript ensures that the codebase remains well-documented and less error-prone, contributing to long-term maintainability.
