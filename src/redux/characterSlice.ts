@@ -22,7 +22,7 @@ const initialState: CharacterState = {
   error: null,
   currentPage: 1,
   nameFilter: "",
-  totalPages: 1, // Set an initial value
+  totalPages: 1, 
 };
 
 export const fetchCharacters = createAsyncThunk(

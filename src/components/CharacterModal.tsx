@@ -57,7 +57,6 @@ const CharacterModal: React.FC<CharacterModalProps> = ({
               <span className="label">Origin:</span>
               <span>{character.origin.name}</span>
             </div>
-            {/* Add more character details as needed */}
           </div>
         </div>
       </div>
