@@ -1,0 +1,88 @@
+.character-table {
+  background-color: rgba(255, 255, 255, 0.7); /* Background color with opacity */
+  padding: 20px; /* Add some padding for better readability */
+}
+.search-container {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.search-input {
+  padding: 5px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+h1 {
+  text-align: center; /* Center the h1 element */
+}
+
+.search-button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #cce5ff;
+}
+
+.details-button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+}
+
+.go-container {
+  display: flex;
+  justify-content: right;
+  margin: 20px;
+}
+
+.page-input {
+  padding: 5px;
+  margin-right: 5px;
+  width: 60px;
+}
+
+.go-button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.go-button:hover {
+  background-color: #0056b3;
+}

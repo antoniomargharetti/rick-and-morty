@@ -1,0 +1,14 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the background image for the entire app */
+body {
+  background-image: url('Rmorty.png'); /* Use Rmorty.png as the background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This will make the image stay fixed behind the content */
+}
