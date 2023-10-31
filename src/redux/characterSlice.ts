@@ -1,7 +1,6 @@
 import {
   createSlice,
   createAsyncThunk,
-  createAction,
   PayloadAction,
 } from "@reduxjs/toolkit";
 import axios from "axios";
@@ -13,6 +12,7 @@ interface CharacterState {
   error: string | null;
   currentPage: number;
   nameFilter: string;
+  favorites: Character[];
   totalPages: number; // New state to store total pages
 }
 
@@ -22,6 +22,7 @@ const initialState: CharacterState = {
   error: null,
   currentPage: 1,
   nameFilter: "",
+  favorites: [],
   totalPages: 1, 
 };
 
@@ -32,6 +33,15 @@ export const fetchCharacters = createAsyncThunk(
       `https://rickandmortyapi.com/api/character/?page=${page}`
     );
     return response.data as ApiResponse;
+    // const allCharacters : Character[] = [];
+    // while(characterUrl!=null) {
+    //   const response = await axios.get(characterUrl);
+    //   const data: ApiResponse = response.data;
+    //   allCharacters.push(...data.results);
+    //   characterUrl =data.info.next ;
+    //   if(data.info.next==null){break;}
+    // }
+    // return allCharacters;
   }
 );
 
@@ -43,9 +53,7 @@ export const fetchCharactersByName = createAsyncThunk(
     );
     return response.data as ApiResponse;
   }
-);
-
-export const setTotalPages = createAction<number>("characters/setTotalPages");
+)
 
 const characterSlice = createSlice({
   name: "characters",
@@ -56,6 +64,11 @@ const characterSlice = createSlice({
     },
     setNameFilter: (state, action: PayloadAction<string>) => {
       state.nameFilter = action.payload;
+    },
+    addFavorites: (state, action: PayloadAction<Character>) => {
+      state.favorites.filter((item) =>  {
+        return item.id===action.payload.id
+      });
     },
   },
   extraReducers: (builder) => {
@@ -89,7 +102,7 @@ const characterSlice = createSlice({
   },
 });
 
-export const { setCurrentPage, setNameFilter } =
+export const { setCurrentPage, setNameFilter, addFavorites } =
   characterSlice.actions;
 
 export default characterSlice.reducer;

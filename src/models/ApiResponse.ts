@@ -21,6 +21,7 @@ export interface Character {
   episode: Episode[];
   url: string;
   created: string;
+  favorite: boolean;
 }
 
 export interface ApiResponse {
